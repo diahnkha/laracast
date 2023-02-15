@@ -109,45 +109,51 @@ Route::get('/', function(){
     ]);
 });
 
+Route::get('/posts/{post:slug}', function(Post $post){
+    return view('post', [
+        'post' => $post
+    ]);
+});
+
 // Route::get('/posts/{post}', function ($slug) {
 
-Route::get('/posts/{post}', function ($id) {
-    //find a post by its slug and pass it to a biew called "post"
+// Route::get('/posts/{post}', function ($id) {
+//     //find a post by its slug and pass it to a biew called "post"
 
-    // $post = Post::find($slug);
+//     // $post = Post::find($slug);
 
-    // return view('post', [
-    //     'post' => Post::find($slug)
-    // ]);
+//     // return view('post', [
+//     //     'post' => Post::find($slug)
+//     // ]);
 
-    return view('post', [
-        'post' => Post::findOrFail($id)
-    ]);
+//     return view('post', [
+//         'post' => Post::findOrFail($id)
+//     ]);
 
-    // $path = __DIR__ . "/../resources/posts/{$slug}.html";
+//     // $path = __DIR__ . "/../resources/posts/{$slug}.html";
 
-    // dd($path);
+//     // dd($path);
 
 
-    // if(! file_exists($path)){
+//     // if(! file_exists($path)){
        
-    //     return redirect('/');
-    // }
+//     //     return redirect('/');
+//     // }
 
-    // $post = cache()->remember("posts.{$slug}", 1200, function () use ($path){
-    //     var_dump('file_get_contents');
-    //     return file_get_contents($path);
-    // });
+//     // $post = cache()->remember("posts.{$slug}", 1200, function () use ($path){
+//     //     var_dump('file_get_contents');
+//     //     return file_get_contents($path);
+//     // });
 
-    // $post = cache()->remember("posts.{$slug}", 1200, fn() => file_get_contents($path));
+//     // $post = cache()->remember("posts.{$slug}", 1200, fn() => file_get_contents($path));
     
-    // // $post = file_get_contents($path);
+//     // // $post = file_get_contents($path);
 
-    // return view('post', [
-    //     'isikonten' => $post
-    // ]);
-});
-// })->whereAlpha('post');
+//     // return view('post', [
+//     //     'isikonten' => $post
+//     // ]);
+// });
+// // })->whereAlpha('post');
 
 // Route::get('/posts', function () {
 //     return [
