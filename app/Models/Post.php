@@ -57,7 +57,26 @@
 
             // return view('post',['post' => $post]);
 
-            return static::all()->firstwhere('slug', $slug);
+            // return static::all()->firstwhere('slug', $slug);
+
+            $post = static::all()->firstWhere('slug', $slug);
+
+            if(! $post){
+                throw new ModelNotFoundException();
+            }
+
+            return $post;
+        }
+
+        public static function findOrFail($slug)
+        {
+            $post = static::find($slug);
+
+            if(!$post){
+                throw new ModelNotFoundException();
+            }
+
+            return $post;
         }
     }
 ?>

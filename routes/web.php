@@ -115,8 +115,12 @@ Route::get('/posts/{post}', function ($slug) {
 
     // $post = Post::find($slug);
 
+    // return view('post', [
+    //     'post' => Post::find($slug)
+    // ]);
+
     return view('post', [
-        'post' => Post::find($slug)
+        'post' => Post::findOrFail($slug)
     ]);
 
     // $path = __DIR__ . "/../resources/posts/{$slug}.html";
