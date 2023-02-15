@@ -109,8 +109,9 @@ Route::get('/', function(){
     ]);
 });
 
-Route::get('/posts/{post}', function ($slug) {
+// Route::get('/posts/{post}', function ($slug) {
 
+Route::get('/posts/{post}', function ($id) {
     //find a post by its slug and pass it to a biew called "post"
 
     // $post = Post::find($slug);
@@ -120,7 +121,7 @@ Route::get('/posts/{post}', function ($slug) {
     // ]);
 
     return view('post', [
-        'post' => Post::findOrFail($slug)
+        'post' => Post::findOrFail($id)
     ]);
 
     // $path = __DIR__ . "/../resources/posts/{$slug}.html";
@@ -145,7 +146,7 @@ Route::get('/posts/{post}', function ($slug) {
     // return view('post', [
     //     'isikonten' => $post
     // ]);
-})->where('post', '[A-z_\-]+');
+});
 // })->whereAlpha('post');
 
 // Route::get('/posts', function () {
