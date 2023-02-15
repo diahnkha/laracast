@@ -9,10 +9,7 @@
 </head>
 <body>
 
-    <header>
-        @yield('banner')
-    </header>
+    {{ $content }}
 
-    @yield('content')
 </body>
 </html>
