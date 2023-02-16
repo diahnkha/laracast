@@ -21,8 +21,8 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function user(){
-        return $this->belongsTo(User::class);
+    public function author(){ //awalanya user, cuma mau diganti biar foreign keynya user_id tapi begitulah
+        return $this->belongsTo(User::class, 'user_id');
     }
 
 }
