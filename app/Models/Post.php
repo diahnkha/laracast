@@ -11,9 +11,14 @@ class Post extends Model
 
     protected $guarded = [];
 
-    public function getRouteKeyName()
+    // public function category()
+    // {
+    //     return $this->belongsTo(Category::class);
+    // }
+
+    public function category()
     {
-        return 'slug';
+        return $this->belongsTo(Category::class);
     }
 
 
