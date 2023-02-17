@@ -9,6 +9,7 @@
             @endif
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div class="lg:grid lg:grid-cols-2">
                 <x-post-card />
                 <x-post-card />
@@ -16,6 +17,9 @@
 
 <<<<<<< HEAD
             <div class="lg:grid lg:grid-cols-6">
+=======
+            <!-- <div class="lg:grid lg:grid-cols-3">
+>>>>>>> parent of f859ed3... fix blade component and css grids
 =======
             <!-- <div class="lg:grid lg:grid-cols-3">
 >>>>>>> parent of f859ed3... fix blade component and css grids
