@@ -13,11 +13,22 @@
                 <x-post-card />
             </div>
 
+<<<<<<< HEAD
             <div class="lg:grid lg:grid-cols-6">
                 <x-post-card />
                 <x-post-card />
                 <x-post-card />
             </div>
         </main>
+=======
+            <p>
+                <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a>
+            </p>
+
+            <p> {!! $post->excerpt !!} </p>
+            
+        </article>
+    @endforeach
+>>>>>>> parent of 23e8ccd... eager loading relationship
 
 </x-layout>
